@@ -1,0 +1,1 @@
+Core of the HTML rotation borrowed from: https://gist.github.com/evidanary/a10f55aafd1f26cd062f
