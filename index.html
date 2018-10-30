@@ -92,35 +92,13 @@
                 if (index < 0) {
                     index = Dash.dashboards.length - 1;
                 }
-                $('#' + index).css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0.0}, 2000);
-                setTimeout(function () {
-                    true;
-                }, 2000);
                 document.getElementById(index).removeAttribute('class');
             },
 
             showFrame: function (index) {
-                $('#' + index).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0}, 200);
                 document.getElementById(index).setAttribute('class', 'active');
             }
         };
-
-        function fetchPage(url) {
-            $.ajax({
-                type: "GET",
-                url: url,
-                error: function (request, status) {
-                    alert('Error fetching ' + url);
-                },
-                success: function (data) {
-                    parse_hadoop_active_nodes(data.responseText);
-                }
-            });
-        }
-
-        function parse(data) {
-            alert($(data).find("#nodes").text());
-        }
 
         window.onload = Dash.startup;
     </script>
